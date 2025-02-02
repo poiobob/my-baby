@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>for my baby</title> <!-- Website Title in Browser Tab -->
+    <style>
+        body {
+            text-align: center;
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: red;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px;
+            border: none;
+            background-color: white;
+            cursor: pointer;
+            position: absolute;
+        }
+        #yes {
+            left: 45%;
+            top: 50%;
+        }
+        #no {
+            left: 55%;
+            top: 50%;
+            transition: 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you be my valentine's?</h1> <!-- Website Heading -->
+    <button id="yes" class="btn" onclick="alert('Yay! I love you! ❤️')">Yes :DDD</button>
+    <button id="no" class="btn" onmouseover="moveButton()" ontouchstart="moveButton()">No :CCC</button>
+
+    <script>
+        function moveButton() {
+            let button = document.getElementById("no");
+            let x = Math.random() * (window.innerWidth - 100); // Random x position
+            let y = Math.random() * (window.innerHeight - 50); // Random y position
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
